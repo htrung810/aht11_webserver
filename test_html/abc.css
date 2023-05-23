@@ -1,0 +1,12 @@
+.list li {
+    display: none;
+  }
+  .list.open li {
+    display: block;
+  }
+  .list:before {
+    content: "+ ";
+  }
+  .list.open:before {
+    content: "- ";
+  }
