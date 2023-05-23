@@ -9,7 +9,7 @@ To install the API, you need to have redis installed and running. You can instal
 Once you have redis installed, you can install the API by running the following commands:
 
 ```bash
-git clone https://github.com/vuonglv1612/basic-sensor-api.git
+git clone https://github.com/htrung810/aht11_webserver.git
 cd basic-sensor-api
 python3.9 -m venv venv
 source venv/bin/activate
