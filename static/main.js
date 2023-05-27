@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8000"
+const apiUrl = "https://basic-sensor-ifvqa.appengine.bfcplatform.vn/"
 
 
 const draw = (metric_name,temperature, humidity) => {

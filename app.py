@@ -13,8 +13,8 @@ from fastapi.templating import Jinja2Templates
 templates = Jinja2Templates(directory="templates")
 
 app = FastAPI(title="Temperature and Humidity Sensor API", version="0.1.0")
-redis_uri = os.getenv("REDIS_URI", "redis://default:2d1a16a449d443149ddd467fd1301c51@apn1-relaxed-halibut-35031.upstash.io:35031")
-secret_api_key = os.getenv("API_KEY")
+redis_uri = os.getenv("REDIS_URI", "redis://:cGYpSG5gpucMclXc@tcp.appengine.bfcplatform.vn:26256")
+secret_api_key = os.getenv("crung")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
