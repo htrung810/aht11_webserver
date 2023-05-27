@@ -1,4 +1,4 @@
-const apiUrl = "https://basic-sensor.herokuapp.com"
+const apiUrl = "http://localhost:8000"
 
 
 const draw = (metric_name,temperature, humidity) => {
@@ -55,9 +55,9 @@ const updateTime = (newTime) => {
 
 const callAllAPI = (callback) => {
     const Allurl = [
-        `${apiUrl}/api/metrics?sensor=sensor1`,
-        `${apiUrl}/api/metrics?sensor=sensor2`,
-        `${apiUrl}/api/metrics?sensor=sensor3`
+        `${apiUrl}/api/metrics?sensor=1`,
+        `${apiUrl}/api/metrics?sensor=2`,
+        `${apiUrl}/api/metrics?sensor=3`
     ];
     const requests = Allurl.map(url => fetch (url));
     Promise.all(requests)
