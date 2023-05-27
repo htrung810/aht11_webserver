@@ -55,9 +55,9 @@ const updateTime = (newTime) => {
 
 const callAllAPI = (callback) => {
     const Allurl = [
-        `${apiUrl}/api/metrics?sensor=1`,
-        `${apiUrl}/api/metrics?sensor=2`,
-        `${apiUrl}/api/metrics?sensor=3`
+        `${apiUrl}/api/metrics?sensor=sensor1`,
+        `${apiUrl}/api/metrics?sensor=sensor2`,
+        `${apiUrl}/api/metrics?sensor=sensor3`
     ];
     const requests = Allurl.map(url => fetch (url));
     Promise.all(requests)
