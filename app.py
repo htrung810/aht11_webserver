@@ -15,7 +15,7 @@ templates = Jinja2Templates(directory="templates")
 
 app = FastAPI(title="Temperature and Humidity Sensor API", version="0.1.0")
 redis_uri = os.getenv("REDIS_URI", "redis://:cGYpSG5gpucMclXc@tcp.appengine.bfcplatform.vn:26256")
-secret_api_key = os.getenv("crung")
+secret_api_key = os.getenv("API_KEY")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

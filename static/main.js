@@ -1,4 +1,4 @@
-const apiUrl = "https://basic-sensor-ifvqa.appengine.bfcplatform.vn/"
+const apiUrl = "https://basic-sensor.herokuapp.com"
 
 
 const draw = (metric_name,temperature, humidity) => {
