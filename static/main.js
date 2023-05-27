@@ -56,8 +56,6 @@ const updateTime = (newTime) => {
 const callAllAPI = (callback) => {
     const Allurl = [
         `${apiUrl}/api/metrics?sensor=1`,
-        `${apiUrl}/api/metrics?sensor=2`,
-        `${apiUrl}/api/metrics?sensor=3`
     ];
     const requests = Allurl.map(url => fetch (url));
     Promise.all(requests)
@@ -72,10 +70,7 @@ const callAllAPI = (callback) => {
 
 const main = () => {
     callAllAPI((data2) => {
-        for(var i = 0; i < 3; i ++)
-        {
-            draw(`metric${i+1}`,data2[i].temperature_c, data2[i].humidity);
-        }
+        draw(`metric1`,data2[0].temperature_c, data2[0].humidity);
         updateTime(data.timestamp)
     })
 }

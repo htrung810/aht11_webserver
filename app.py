@@ -10,6 +10,7 @@ from fastapi import FastAPI, Request, Depends, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+
 templates = Jinja2Templates(directory="templates")
 
 app = FastAPI(title="Temperature and Humidity Sensor API", version="0.1.0")
