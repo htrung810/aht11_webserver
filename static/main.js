@@ -1,4 +1,4 @@
-const apiUrl = "https://basic-sensor-ifvqa.appengine.bfcplatform.vn"
+const apiUrl = "https://basic-sensor-ifvqa.appengine.bfcplatform.vn/"
 
 
 const draw = (metric_name,temperature, humidity) => {
@@ -56,6 +56,8 @@ const updateTime = (newTime) => {
 const callAllAPI = (callback) => {
     const Allurl = [
         `${apiUrl}/api/metrics?sensor=1`,
+        `${apiUrl}/api/metrics?sensor=2`,
+        `${apiUrl}/api/metrics?sensor=3`
     ];
     const requests = Allurl.map(url => fetch (url));
     Promise.all(requests)
@@ -70,7 +72,10 @@ const callAllAPI = (callback) => {
 
 const main = () => {
     callAllAPI((data2) => {
-        draw(`metric1`,data2[0].temperature_c, data2[0].humidity);
+        for(var i = 0; i < 3; i ++)
+        {
+            draw(`metric${i+1}`,data2[i].temperature_c, data2[i].humidity);
+        }
         updateTime(data.timestamp)
     })
 }
